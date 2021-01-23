@@ -1,5 +1,5 @@
 ######################################################
-# Cargar librerias
+# 1 Cargar librerias
 ######################################################
 
 library(shiny)
@@ -9,7 +9,7 @@ library(reshape2)
 library(plotly)
 
 ######################################################
-# Carga y manipulacion de datos
+# 2 Carga y manipulacion de datos
 ######################################################
 
 datos <- read_csv("datos.csv", 
@@ -19,7 +19,7 @@ datos <- read_csv("datos.csv",
 datos['dia'] <- as.Date(datos$date)
 
 ######################################################
-# UI
+# 3 UI
 ######################################################
 
 #Preferentemente tener el ui en un fichero independiente
@@ -113,7 +113,7 @@ ui <- dashboardPage(
 )
 
 ######################################################
-# SERVER
+# 4 SERVER
 ######################################################
 
 #Preferentemente tener el server en otro fichero independiente
@@ -311,7 +311,7 @@ server <- function(input, output) {
 # Para cargar desde otro fichero habria que llamarlo asi: source("server.R")
 
 ######################################################
-# SHINYAPP
+# 5 SHINYAPP
 ######################################################
 
 #esto lanza la aplicacion, une el ui con el server
